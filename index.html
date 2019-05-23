@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>КнигиОнлайн</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+<div class="offer">
+	<div class="inner blured">
+		<span>Нажатием на кнопку "Смотреть" Вы подтверждаете свое согласие с подключением подписки SUBNAME и <a
+			href="http://podpiski.megafon.ru/col/mds4/web/jsp/files/oferta.pdf">Условиями предоставления подписки</a>. Стоимость подписки SUBPRICE.ACCOUNT. Услуга предоставляется Контент-провайдером PROVIDER.</span>
+	</div>
+</div>
+<div class="header">
+	<div class="inner blured">
+		<div class="name">
+			<span>Книги</span><span>Онлайн</span>
+		</div>
+		<div class="plus18">
+			<div></div>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="inner blured">
+		<div class="search">
+			<div class="inner">
+				<input type="text" disabled placeholder="Книга или автор">
+				<button disabled>Найти</button>
+			</div>
+		</div>
+		<div class="menu">
+			<ul>
+				<li>Книги</li>
+				<li>Аудиокниги</li>
+				<li>Статьи</li>
+				<li>Ещё...</li>
+			</ul>
+		</div>
+		<div class="heading">
+			<h1>Книжные бестселлеры</h1>
+		</div>
+		<div class="selects-wrapper">
+			<div class="inner">
+				<div class="select genre">
+					<span>Все жанры</span>
+					<div class="icon"></div>
+				</div>
+				<div class="select category">
+					<span>Популярное за неделю</span>
+					<div class="icon"></div>
+				</div>
+				<div class="select sort">
+					<span>По дате добавления</span>
+					<div class="icon"></div>
+				</div>
+			</div>
+		</div>
+		<div class="placeholder"></div>
+		<div class="books">
+			<ul class="inner">
+				<li class="book">
+					<div class="preview">
+						<div class="label label-hit">ХИТ!</div>
+					</div>
+					<div class="description">
+						<ul class="stars">
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+						</ul>
+						<div class="readers">
+							<span>Прочитали: </span><span>8 582 человек(а)</span>
+						</div>
+					</div>
+				</li>
+				<li class="book">
+					<div class="preview"></div>
+					<div class="description">
+						<ul class="stars">
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+						</ul>
+						<div class="readers">
+							<span>Прочитали: </span><span>1 487 человек(а)</span>
+						</div>
+					</div>
+				</li>
+				<li class="book">
+					<div class="preview">
+						<div class="label label-new">НОВИНКА!</div>
+					</div>
+					<div class="description">
+						<ul class="stars">
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+							<li class="star-item"></li>
+						</ul>
+						<div class="readers">
+							<span>Прочитали: </span><span>740 человек(а)</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="btn-wrapper" id="btn-wrapper">
+		<a class="btn" id="wapSubmitBtn" href="<TARIF_YES_URL>">
+			<span>Читать</span>
+		</a>
+		<div class="cancel">
+			<a href="<TARIF_NO_URL>">
+				<span>Отмена</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="rules" id="footer">
+	<div class="inner blured">
+		<p>Информация для абонентов - тел. 8 800 500-25-43 (бесплатно в домашнем регионе) | <a href="ВАША ССЫЛКА НА ПРАВИЛА
+ПОДПИСКИ">Правила подписки поставщика услуг</a> | <a href="#<LK_LINK_URL>">Личный кабинет</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+		//<![CDATA[
+		function rsz() {
+				var footer = document['getElementById']('footer');
+				var buttonWrap = document['getElementsByClassName']('btn-wrapper')[0];
+				footer['style']['bottom'] = "auto";
+				footer['style']['top'] = (window['innerHeight'] - footer.offsetHeight) + 'px';
+				if ((window['innerHeight'] > 212) && (window['innerHeight'] < 233)) {
+						buttonWrap['style']['marginTop'] = '-'+ (footer.offsetHeight-55) + 'px';
+				} else { buttonWrap['style']['marginTop'] = 0; }
+
+				document.body.style.height = window.innerHeight + 'px';
+		}
+		setInterval(function() {
+				rsz()
+		}, 100);
+		window['onresize'] = function() {
+				window['scrollTo'](0, 0);
+				setTimeout(function() {
+						rsz()
+				}, 100)
+		};
+		document.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+		}, { passive: false });
+		//]]>
+</script>
+
+</body>
+</html>
